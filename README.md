@@ -1,27 +1,25 @@
 # Fintech-Module-6-Challenge
 
-# Fintech-Module-4-Challenge
+# Housing Rental Analysis for San Francisco
 
-# Qantitative Analysis Of Select Portfolios
-
-The fourth module asks that I assume the role of a financial analyst for a FinTech investing platform. In this exercise we have leveraged Pandas to evaluate the performance, volatility, risk, risk-return profile and portfolio diversification in order to make a judgement on which portfolio product would be best to offer to our clients. 
+In this challenge, your job is to use your data visualization skills, including aggregation, interactive visualizations, and geospatial analysis, to find properties in the San Francisco market that are viable investment opportunities.
 
 ## Technologies
 
 This project leverages Python 3.9.7 ((default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32) with the following packages:
  
- * [jupyterlab](https://jupyterlab.readthedocs.io/en/stable/user/urls.html#managing-workspaces-ui) - For information about the jupyter lab remote workspace hosted by a local computer.
+* [jupyterlab](https://jupyterlab.readthedocs.io/en/stable/user/urls.html#managing-workspaces-ui) - For information about the jupyter lab remote workspace hosted by a local computer.
  
+* [pandas](https://pandas.pydata.org/docs/) - Source repository. 
+pandas is an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools for the Python programming language.
+
+* [hvplot.pandas](https://hvplot.holoviz.org/) pandas
+The PyData ecosystem has a number of core Python data containers that allow users to work with a wide array of datatypes
+
 * [pathlib](https://docs.python.org/3/library/pathlib.html#module-pathlib) - For the command line interface, help page, and entry-point.
 
-* [matplotlib](https://matplotlib.org/stable/index.html) - Matplotlib 3.5.1 documentation
-Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
-
-* [matplotlib.pyplot](https://matplotlib.org/3.5.0/api/_as_gen/matplotlib.pyplot.html) - Matplotlib 3.5.1 documentation. 
-matplotlib.pyplot is a state-based interface to matplotlib. It provides an implicit, MATLAB-like, way of plotting. It also opens figures on your screen, and acts as the figure GUI manager.
-
-* [numpy](https://github.com/numpy/numpy) - Source repository. 
-NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+* [geopandas](https://geopandas.org/en/stable/)
+GeoPandas is an open source project to make working with geospatial data in python easier. GeoPandas extends the datatypes used by pandas to allow spatial operations on geometric types. Geometric operations are performed by shapely. Geopandas further depends on fiona for file access and matplotlib for plotting.
 ---
 
 ## Installation Guide
@@ -29,18 +27,32 @@ NumPy is the fundamental package for scientific computing in Python. It is a Pyt
 Before running the application first install the following dependencies.
 
 ```python
- import pandas as pd
+import pandas as pd
+import hvplot.pandas
 from pathlib import Path
-%matplotlib inline
-import matplotlib.pyplot as plt
-import numpy as np 
+import geopandas as gpd
 ```
 
 ---
 
 ## Usage
 
-Evaluate company 'close' prices from a csv file located in the Resouces folder.  
+Use the san_francisco_housing.ipynb notebook to visualize and analyze the real-estate data.
+
+Create a visualization by using hvPlot and GeoViews. Additionally, you need to read the sfo_neighborhoods_census_data.csv file from the Resources folder into the notebook and create the DataFrame that you’ll use in the analysis.
+
+Use the san_francisco_housing.ipynb notebook to complete the following tasks:
+
+    Calculate and plot the housing units per year.
+
+    Calculate and plot the average prices per square foot.
+
+    Compare the average prices by neighborhood.
+
+    Build an interactive neighborhood map.
+
+    Compose your data story.
+
 
 
 ---
